@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Design System</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Inter', sans-serif;
+      line-height: 1.5;
+      padding: var(--space-4);
+      background: linear-gradient(
+        to bottom,
+        #48BEFF 0% 20%,
+        #3DFAFF 20% 40%,
+        #43C59E 40% 60%,
+        #3D7068 60% 80%,
+        #14453D 80% 100%
+      );
+      color: white;
+    }
+
+    :root {
+      --space-1: 8px;
+      --space-2: 16px;
+      --space-3: 24px;
+      --space-4: 32px;
+      --space-5: 48px;
+    }
+
+    .content {
+      background: rgba(255, 255, 255, 0.9);
+      color: #000;
+      padding: var(--space-4);
+      border-radius: 8px;
+      max-width: 900px;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-4); 
+    }
+
+    h1, h2, h3 {
+      font-family: 'Comic Neue', cursive;
+      margin-bottom: var(--space-2); 
+    }
+
+    p, small {
+      margin-bottom: var(--space-2); 
+    }
+
+    .typography p {
+      padding-bottom: var(--space-2); 
+    }
+
+    .btn {
+      padding: var(--space-2) var(--space-3);
+      border: none;
+      border-radius: 4px;
+      background: #43C59E;
+      color: white;
+      cursor: pointer;
+      font-weight: 600;
+      margin-bottom: var(--space-2);
+    }
+    .btn:hover { background: #3D7068; }
+    .btn:focus { outline: 2px solid #48BEFF; }
+
+    a { color: #48BEFF; font-weight: 600; margin-bottom: var(--space-2); display: inline-block; }
+    a:hover { color: #14453D; }
+    a:visited { color: #3D7068; }
+
+    input {
+      padding: var(--space-2);
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      margin-bottom: var(--space-3);
+      width: 100%;
+      max-width: 300px;
+    }
+    input:focus { border-color: #48BEFF; outline: none; }
+
+    section { margin-bottom: var(--space-5); }
+
+    .demo-box {
+      background: #48BEFF;
+      padding: var(--space-3);
+      margin-bottom: var(--space-3);
+      border-radius: 4px;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <div class="content">
+    <h1>Fancy Design System</h1>
+    <p>Colors and stuff.</p>
+
+    <section class="typography">
+      <h2>Type stuff</h2>
+      <h1>Heading 1</h1>
+      <p>Fancy spacing check it.</p>
+      <h2>Heading 2</h2>
+      <p>same spacing as before.</p>
+      <h3>Heading 3</h3>
+      <small>3-0</small>
+    </section>
+
+    <section>
+      <h2>Spacing System in Use</h2>
+      <div class="demo-box">This box uses least padding</div>
+      <div class="demo-box" style="padding: var(--space-4)">This box uses padding 4</div>
+      <div class="demo-box" style="padding: var(--space-5)">This box uses padding 5</div>
+    </section>
+
+    <section>
+      <h2>Interatables</h2>
+      <p>Kinda sounds like a pixar move name, the Interactables</p>
+      <button class="btn">This is a red button</button>
+      <p><a href="#">This is a place to get free v-bucks</a></p>
+      <input type="text" placeholder="Soccerin time" />
+      <input type="email" placeholder="fancy email thing" />
+    </section>
+  </div>
+</body>
+</html>
